@@ -30,7 +30,6 @@ public class dfs와bfs {
         }
         System.out.print(node + " ");
 
-
     }
 
     public static void main(String[] args) throws IOException{
