@@ -67,9 +67,9 @@ public class 백준2667이건다시bfsdfs {
             }
         }
 
-    } // End of DFS
+    }
 
     static boolean Range_check() {
         return (nowX >= 0 && nowX < N && nowY >= 0 && nowY < N);
     } // End of Range_check
-} // End of class
+}
