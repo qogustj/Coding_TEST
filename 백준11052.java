@@ -21,7 +21,4 @@ public class 백준11052 {
             }
         }
     }
-    static int[] solution(int[] arr){
-        for
-    }
 }
