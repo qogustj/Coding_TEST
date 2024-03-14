@@ -13,7 +13,7 @@ public class 백준2606 {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         N = Integer.parseInt(bufferedReader.readLine()); // 정점의 개수를 읽음
-        E = Integer.parseInt(bufferedReader.readLine()); // 간선의 개수를 읽음
+        E = Integer.parseInt(bufferedReader.readLine());
         Visited = new boolean[N+1];
         Graph = new int[N+1][N+1];
         for(int i=0; i<E; ++i){
