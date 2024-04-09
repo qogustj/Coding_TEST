@@ -1,5 +1,5 @@
 package samsung;
-
+//배운거 백트래킹 Integer.MAAX_VALUE 사용법, 접근하는 방법에서 인덱스 번호를 신경쓰는법이 너무 부족함..
 import java.util.*;
 import java.io.*;
 public class 백준14889 {
