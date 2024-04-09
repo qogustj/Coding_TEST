@@ -3,6 +3,7 @@ package samsung;
 //일단 톱니 방향을 나타내는 d 배열을 첨엔 while문 밖에서 초기화 시켜서 여러번 연속되는 과정속에서 중첩되어 방향이 정해지게 됨 이게 문제
 //while문 안에 넣음으로써 한 사이클이 끝나고 다시 초기화시켜야 하는데 그냥 초기화시킬때 이런 실수 잘 봐야할듯
 //그리고 방향을 배열에 어떻게 담을지 첨엔 연쇄적으로 일어나는걸 생각했는데, 이미 다 계산하고 그냥 0부터 돌리는 느낌!
+//연속된 숫자 받을때 string으로 받고 charAt(idx)-'0'으로 받기! 기억
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
