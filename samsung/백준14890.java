@@ -40,6 +40,7 @@ public class 백준14890 {
             if (map[i][col] == map[i + 1][col]) {
                 i++;
             } else if (Math.abs(map[i][col] - map[i + 1][col]) == 1) {
+                //오르막
                 if (map[i][col] < map[i + 1][col]) {
                     if (i - L + 1 >= 0 && checkFlatnessc(i - L + 1, i, col, visited)) {
                         for (int j = i - L + 1; j <= i; j++) {
@@ -49,7 +50,9 @@ public class 백준14890 {
                     } else {
                         break;
                     }
-                } else {
+                }
+                //내리막
+                else {
                     if (i + L < N && checkFlatnessc(i + 1, i + L, col, visited)) {
                         for (int j = i + 1; j <= i + L; j++) {
                             visited[j] = true;
