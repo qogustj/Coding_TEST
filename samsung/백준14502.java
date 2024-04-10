@@ -1,5 +1,6 @@
 package samsung;
 // dfs속 bfs 구조는 한번에 알았는데 bfs 구현을 잘 못했다! 일단 큐로 하는법을 배웠다.
+//deque랑 linkedlist는 뭔차인지 잘 모르겠다 deque가 속도는 더 빠르다.
 
 import java.io.BufferedReader;
 import java.io.IOException;
