@@ -15,6 +15,7 @@ public class 백준15685 {
 
         n= Integer.parseInt(br.readLine());
         map = new int[101][101];
+        int n =map.length;
         for(int i=0;i<n;i++){
             st = new StringTokenizer(br.readLine());
             int x = Integer.parseInt(st.nextToken());
