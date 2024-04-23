@@ -9,9 +9,10 @@ public class 백준2468 {
     static boolean[][] visit;
     static int maxH = Integer.MIN_VALUE;
     static int max = Integer.MIN_VALUE;
-    static int[] dy = {-1, 0,1 ,0};
-    static int[] dx = {0, 1,0,-1};
+    static int[] dy = {-1, 0, 1, 0};
+    static int[] dx = {0, 1, 0, -1};
     static int count;
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
@@ -19,50 +20,40 @@ public class 백준2468 {
         N = Integer.parseInt(br.readLine());
         map = new int[N][N];
         visit = new boolean[N][N];
-        for(int i=0; i<N; i++){
+        for (int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
-            for(int j=0; j<N; j++){
+            for (int j = 0; j < N; j++) {
                 map[i][j] = Integer.parseInt(st.nextToken());
                 maxH = Math.max(maxH, map[i][j]);
             }
         }
 
-        for(int h=1; h<maxH; h++){
+        for (int h = 0; h <= maxH; h++) {
             count = 0;
             visit = new boolean[N][N]; // visit 배열 초기화
-            for(int i=0; i<N;i++){
-                for(int j=0;j<N;j++){
-                    dfs(i,j,h);
+            for (int i = 0; i < N; i++) {
+                for (int j = 0; j < N; j++) {
+                    if (!visit[i][j] && map[i][j] > h) {
+                        count += dfs(i, j, h);
+                    }
                 }
             }
             max = Math.max(max, count);
         }
-    System.out.println(max);
-
-
+        System.out.println(max);
     }
 
-
-    public static void dfs(int y, int x, int h) {
-        if (map[y][x] <= h || y < 0 || x < 0 || y >= N || x >= N || visit[y][x]) {
-            return;
-        }
-
-        if (!visit[y][x]) {
-            visit[y][x] = true;
-            count++;
-        }
-
+    public static int dfs(int x, int y, int h) {
+        visit[x][y] = true;
         for (int i = 0; i < 4; i++) {
-            int my = y + dy[i];
-            int mx = x + dx[i];
-            if(my>=0 && mx>=0 && my<N && mx<N ) {
-                if(map[mx][my]>h){
-                    visit[my][mx] = true;
-                    dfs(my, mx, h);
-                }
-
+            int nx = x + dx[i];
+            int ny = y + dy[i];
+            if (nx < 0 || ny < 0 || nx >= N || ny >= N) continue;
+            if (visit[nx][ny]) continue;
+            if (map[nx][ny] > h) {
+                dfs(nx, ny, h);
             }
         }
+        return 1;
     }
 }
