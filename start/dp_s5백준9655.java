@@ -10,6 +10,13 @@ public class dp_s5백준9655 {
         boolean[] dp;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         N = Integer.parseInt(br.readLine());
+        if (N == 1 || N == 3) {
+            System.out.println("SK");
+            return;
+        } else if (N == 2) {
+            System.out.println("CY");
+            return;
+        }
         dp = new boolean[N+1];
         dp[1] = true;
         dp[2] = false;
