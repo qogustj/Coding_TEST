@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class s1백준1446 {
+public class dp_s1백준1446 {
     static int N, D;
     static List<ShortCut>[] shortCuts;
     static int[] dp;
