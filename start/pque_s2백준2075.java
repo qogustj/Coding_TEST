@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
-public class que_s2백준2075 {
+public class pque_s2백준2075 {
     static int N;
     static int[][] arr;
     static int[] big;
