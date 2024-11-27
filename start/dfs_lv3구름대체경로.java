@@ -3,7 +3,7 @@ package start;
 import java.io.*;
 import java.util.*;
 
-class Main {
+class dfs_lv3구름대체경로 {
     static int n, m, s, e;
     static List<List<Integer>> graph = new ArrayList<>();
 
