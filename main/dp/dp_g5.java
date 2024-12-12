@@ -1,4 +1,4 @@
-package main;
+package main.dp;
 
 import java.io.*;
 import java.util.*;
